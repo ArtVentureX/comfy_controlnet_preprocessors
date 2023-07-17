@@ -3,8 +3,8 @@ import inspect
 
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import is_tuple_of
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils.parrots_wrapper import SyncBatchNorm, _BatchNorm, _InstanceNorm
+from ...utils import is_tuple_of
+from ...utils.parrots_wrapper import SyncBatchNorm, _BatchNorm, _InstanceNorm
 from .registry import NORM_LAYERS
 
 NORM_LAYERS.register_module('BN', module=nn.BatchNorm2d)

@@ -3,9 +3,9 @@ import copy
 import logging
 import numpy as np
 import time
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.cocoeval import COCOeval
+from ...pycocotools.cocoeval import COCOeval
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2 import _C
+from . import _C
 
 logger = logging.getLogger(__name__)
 

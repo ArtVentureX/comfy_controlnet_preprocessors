@@ -1,4 +1,4 @@
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import DepthwiseSeparableConvModule
+from ....mmcv.cnn import DepthwiseSeparableConvModule
 
 from ..builder import HEADS
 from .fcn_head import FCNHead

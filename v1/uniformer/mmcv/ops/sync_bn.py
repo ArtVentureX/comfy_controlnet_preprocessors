@@ -7,7 +7,7 @@ from torch.autograd.function import once_differentiable
 from torch.nn.modules.module import Module
 from torch.nn.parameter import Parameter
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import NORM_LAYERS
+from ...mmcv.cnn import NORM_LAYERS
 from ..utils import ext_loader
 
 ext_module = ext_loader.load_ext('_ext', [

@@ -2,7 +2,7 @@
 import numpy as np
 from typing import List
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Instances
+from ..structures import Instances
 
 
 def create_prediction_pairs(

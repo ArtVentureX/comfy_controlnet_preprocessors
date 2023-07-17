@@ -51,8 +51,8 @@ print("Download models...")
 add_global_shortcut_module("cli_args", os.path.join(EXT_PATH, "../../comfy/cli_args.py"))
 add_global_shortcut_module("model_management", os.path.join(EXT_PATH, "../../comfy/model_management.py"))
 add_global_shortcut_module(this_module_name, os.path.join(EXT_PATH, "__init__.py"))
-from custom_nodes.comfy_controlnet_preprocessors.v1 import canny, hed_v1, midas, mlsd, openpose_v1, uniformer, leres
-from custom_nodes.comfy_controlnet_preprocessors.v11 import zoe, normalbae, hed_v11, pidinet_v11
+from .v1 import canny, hed_v1, midas, mlsd, openpose_v1, uniformer, leres
+from .v11 import zoe, normalbae, hed_v11, pidinet_v11
 
 sleep(2)
 download_models()

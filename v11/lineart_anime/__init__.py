@@ -9,7 +9,7 @@ import functools
 import os
 import cv2
 from einops import rearrange
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 import comfy.model_management as model_management
 
 
@@ -118,7 +118,7 @@ class LineartAnimeDetector:
         remote_model_path = "https://huggingface.co/lllyasviel/Annotators/resolve/main/netG.pth"
         modelpath = os.path.join(annotator_ckpts_path, "netG.pth")
         if not os.path.exists(modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
         norm_layer = functools.partial(nn.InstanceNorm2d, affine=False, track_running_stats=False)
         net = UnetGenerator(3, 1, 8, 64, norm_layer=norm_layer, use_dropout=False)

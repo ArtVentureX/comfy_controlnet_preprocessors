@@ -3,7 +3,7 @@ import math
 from typing import List
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.solver.lr_scheduler import LRScheduler, _get_warmup_factor_at_iter
+from ...solver.lr_scheduler import LRScheduler, _get_warmup_factor_at_iter
 
 # NOTE: PyTorch's LR scheduler interface uses names that assume the LR changes
 # only on epoch boundaries. We typically use iteration based schedules instead.

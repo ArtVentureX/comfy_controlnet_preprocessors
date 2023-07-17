@@ -1,7 +1,7 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import os.path as osp
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import TORCH_VERSION, digit_version
+from .....mmcv.utils import TORCH_VERSION, digit_version
 from ...dist_utils import master_only
 from ..hook import HOOKS
 from .base import LoggerHook

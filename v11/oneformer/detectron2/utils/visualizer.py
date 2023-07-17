@@ -8,14 +8,14 @@ import cv2
 import matplotlib as mpl
 import matplotlib.colors as mplc
 import matplotlib.figure as mplfigure
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ...pycocotools import mask as mask_util
 import torch
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from PIL import Image
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import BitMasks, Boxes, BoxMode, Keypoints, PolygonMasks, RotatedBoxes
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ..data import MetadataCatalog
+from ..structures import BitMasks, Boxes, BoxMode, Keypoints, PolygonMasks, RotatedBoxes
+from ..utils.file_io import PathManager
 
 from .colormap import random_color
 

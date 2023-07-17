@@ -8,7 +8,7 @@ import numpy as np
 
 import torch.nn as nn
 from einops import rearrange
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 import comfy.model_management as model_management
 
 norm_layer = nn.InstanceNorm2d
@@ -100,7 +100,7 @@ class LineartDetector:
         remote_model_path = "https://huggingface.co/lllyasviel/Annotators/resolve/main/" + name
         modelpath = os.path.join(annotator_ckpts_path, name)
         if not os.path.exists(modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
         model = Generator(3, 1, 3)
         model.load_state_dict(torch.load(modelpath, map_location=model_management.get_torch_device()))

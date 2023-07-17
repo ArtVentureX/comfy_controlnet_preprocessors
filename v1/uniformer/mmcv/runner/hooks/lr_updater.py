@@ -2,7 +2,7 @@
 import numbers
 from math import cos, pi
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from .....uniformer import mmcv as mmcv
 from .hook import HOOKS, Hook
 
 

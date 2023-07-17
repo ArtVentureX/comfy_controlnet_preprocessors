@@ -3,7 +3,7 @@ import math
 from typing import List, Tuple
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers.rotated_boxes import pairwise_iou_rotated
+from ..layers.rotated_boxes import pairwise_iou_rotated
 
 from .boxes import Boxes
 

@@ -6,11 +6,11 @@ from typing import Dict, List, Optional, Tuple
 import torch
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, nonzero_tuple
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, ImageList, Instances, pairwise_iou
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import get_event_storage
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.registry import Registry
+from ...config import configurable
+from ...layers import ShapeSpec, nonzero_tuple
+from ...structures import Boxes, ImageList, Instances, pairwise_iou
+from ...utils.events import get_event_storage
+from ...utils.registry import Registry
 
 from ..backbone.resnet import BottleneckBlock, ResNet
 from ..matcher import Matcher

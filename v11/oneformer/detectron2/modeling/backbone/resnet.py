@@ -5,7 +5,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import (
+from ...layers import (
     CNNBlockBase,
     Conv2d,
     DeformConv,

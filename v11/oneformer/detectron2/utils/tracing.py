@@ -1,7 +1,7 @@
 import inspect
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.env import TORCH_VERSION
+from ..utils.env import TORCH_VERSION
 
 try:
     from torch.fx._symbolic_trace import is_fx_tracing as is_fx_tracing_current

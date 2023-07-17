@@ -2,7 +2,7 @@
 import os.path as osp
 import warnings
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.fileio import FileClient
+from ....mmcv.fileio import FileClient
 from ..dist_utils import allreduce_params, master_only
 from .hook import HOOKS, Hook
 

@@ -1,10 +1,10 @@
 import torch
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.transforms as T
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.checkpoint import DetectionCheckpointer
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import (
+from ...detectron2.data import transforms as T
+from ...detectron2.checkpoint import DetectionCheckpointer
+from ...detectron2.data import (
     MetadataCatalog,
 )
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling import build_model
+from ...detectron2.modeling import build_model
 
 
 __all__ = [

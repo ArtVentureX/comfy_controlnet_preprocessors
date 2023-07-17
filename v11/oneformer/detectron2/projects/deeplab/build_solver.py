@@ -1,9 +1,9 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import CfgNode
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.solver import LRScheduler
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.solver import build_lr_scheduler as build_d2_lr_scheduler
+from ...config import CfgNode
+from ...solver import LRScheduler
+from ...solver import build_lr_scheduler as build_d2_lr_scheduler
 
 from .lr_scheduler import WarmupPolyLR
 

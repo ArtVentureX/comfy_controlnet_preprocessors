@@ -1,6 +1,6 @@
 import torch
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from .....uniformer import mmcv as mmcv
 
 
 class _BatchNormXd(torch.nn.modules.batchnorm._BatchNorm):

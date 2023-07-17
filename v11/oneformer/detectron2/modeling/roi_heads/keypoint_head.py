@@ -4,11 +4,11 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import Conv2d, ConvTranspose2d, cat, interpolate
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Instances, heatmaps_to_keypoints
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import get_event_storage
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.registry import Registry
+from ...config import configurable
+from ...layers import Conv2d, ConvTranspose2d, cat, interpolate
+from ...structures import Instances, heatmaps_to_keypoints
+from ...utils.events import get_event_storage
+from ...utils.registry import Registry
 
 _TOTAL_SKIPPED = 0
 

@@ -8,8 +8,8 @@ import time
 import torch
 import torch.distributed as dist
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import get_dist_info
+from ....uniformer import mmcv as mmcv
+from ..runner import get_dist_info
 
 
 def single_gpu_test(model, data_loader):

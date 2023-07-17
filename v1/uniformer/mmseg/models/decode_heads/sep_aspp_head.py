@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import ConvModule, DepthwiseSeparableConvModule
+from ....mmcv.cnn import ConvModule, DepthwiseSeparableConvModule
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import resize
+from ....mmseg.ops import resize
 from ..builder import HEADS
 from .aspp_head import ASPPHead, ASPPModule
 

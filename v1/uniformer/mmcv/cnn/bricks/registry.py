@@ -1,5 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import Registry
+from ...utils import Registry
 
 CONV_LAYERS = Registry('conv layer')
 NORM_LAYERS = Registry('norm layer')

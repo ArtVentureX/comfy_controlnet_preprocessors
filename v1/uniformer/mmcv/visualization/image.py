@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.image import imread, imwrite
+from ..image import imread, imwrite
 from .color import color_val
 
 

@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import ConvModule
+from ....mmcv.cnn import ConvModule
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import resize
+from ....mmseg.ops import resize
 from ..builder import HEADS
 from .decode_head import BaseDecodeHead
 

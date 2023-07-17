@@ -5,10 +5,10 @@ from typing import List
 import torch
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, move_device_like
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, RotatedBoxes
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.registry import Registry
+from ..config import configurable
+from ..layers import ShapeSpec, move_device_like
+from ..structures import Boxes, RotatedBoxes
+from ..utils.registry import Registry
 
 ANCHOR_GENERATOR_REGISTRY = Registry("ANCHOR_GENERATOR")
 ANCHOR_GENERATOR_REGISTRY.__doc__ = """

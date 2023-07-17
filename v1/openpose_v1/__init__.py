@@ -6,7 +6,7 @@ import numpy as np
 from . import util
 from .body import Body
 from .hand import Hand
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 
 
 body_model_path = "https://huggingface.co/lllyasviel/Annotators/resolve/main/body_pose_model.pth"
@@ -19,7 +19,7 @@ class OpenposeDetector:
         hand_modelpath = os.path.join(annotator_ckpts_path, "hand_pose_model.pth")
 
         if not os.path.exists(hand_modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(body_model_path, model_dir=annotator_ckpts_path)
             load_file_from_url(hand_model_path, model_dir=annotator_ckpts_path)
 

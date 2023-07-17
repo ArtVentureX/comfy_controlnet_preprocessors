@@ -8,7 +8,7 @@ import numpy as np
 import os
 import cv2
 from einops import rearrange
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ..util import annotator_ckpts_path
 import comfy.model_management as model_management
 from .model_torch import res_skip
 
@@ -17,7 +17,7 @@ class MangaLineExtractor:
         remote_model_path = "https://github.com/ljsabc/MangaLineExtraction_PyTorch/releases/download/v1/erika.pth"
         modelpath = os.path.join(annotator_ckpts_path, "erika.pth")
         if not os.path.exists(modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ..util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
         net = res_skip()
         net.load_state_dict(torch.load(modelpath))

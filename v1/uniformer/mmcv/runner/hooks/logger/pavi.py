@@ -6,7 +6,7 @@ import os.path as osp
 import torch
 import yaml
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from ......uniformer import mmcv as mmcv
 from ....parallel.utils import is_module_wrapper
 from ...dist_utils import master_only
 from ..hook import HOOKS

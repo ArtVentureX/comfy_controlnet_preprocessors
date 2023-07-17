@@ -10,7 +10,7 @@ from .midas.dpt_depth import DPTDepthModel
 from .midas.midas_net import MidasNet
 from .midas.midas_net_custom import MidasNet_small
 from .midas.transforms import Resize, NormalizeImage, PrepareForNet
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 
 
 ISL_PATHS = {
@@ -90,7 +90,7 @@ def load_model(model_type):
 
     elif model_type == "dpt_hybrid":  # DPT-Hybrid
         if not os.path.exists(model_path):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
 
         model = DPTDepthModel(

@@ -3,7 +3,7 @@ import warnings
 
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import _BatchNorm, _InstanceNorm
+from ...utils import _BatchNorm, _InstanceNorm
 from ..utils import constant_init, kaiming_init
 from .activation import build_activation_layer
 from .conv import build_conv_layer

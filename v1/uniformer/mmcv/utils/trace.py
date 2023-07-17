@@ -2,7 +2,7 @@ import warnings
 
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import digit_version
+from ...mmcv.utils import digit_version
 
 
 def is_jit_tracing() -> bool:

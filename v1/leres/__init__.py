@@ -14,7 +14,7 @@ from .leres.net_tools import strip_prefix_if_present
 #from .pix2pix.options.test_options import TestOptions
 #from .pix2pix.models.pix2pix4depth_model import Pix2Pix4DepthModel
 
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 base_model_path = annotator_ckpts_path
 old_modeldir = os.path.dirname(os.path.realpath(__file__))
 import comfy.model_management as model_management
@@ -39,7 +39,7 @@ def download_model_if_not_existed():
     #if os.path.exists(old_model_path):
     #    model_path = old_model_path
     if not os.path.exists(model_path):
-        from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+        from ...util import load_file_from_url
         load_file_from_url(remote_model_path_leres, model_dir=base_model_path)
         os.rename(os.path.join(base_model_path, 'download'), model_path)
     return model_path

@@ -4,8 +4,8 @@ import fvcore.nn.weight_init as weight_init
 import torch
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import CNNBlockBase, Conv2d, get_norm
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling.backbone.fpn import _assert_strides_are_log2_contiguous
+from ...layers import CNNBlockBase, Conv2d, get_norm
+from ...modeling.backbone.fpn import _assert_strides_are_log2_contiguous
 
 from .backbone import Backbone
 from .utils import (

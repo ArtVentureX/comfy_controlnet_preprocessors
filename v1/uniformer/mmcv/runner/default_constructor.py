@@ -9,7 +9,7 @@ class DefaultRunnerConstructor:
     For example, We can inject some new properties and functions for `Runner`.
 
     Example:
-        >>> from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import RUNNER_BUILDERS, build_runner
+        >>> from ...mmcv.runner import RUNNER_BUILDERS, build_runner
         >>> # Define a new RunnerReconstructor
         >>> @RUNNER_BUILDERS.register_module()
         >>> class MyRunnerConstructor:

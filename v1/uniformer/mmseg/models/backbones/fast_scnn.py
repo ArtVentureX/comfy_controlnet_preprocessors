@@ -1,11 +1,11 @@
 import torch
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import (ConvModule, DepthwiseSeparableConvModule, constant_init,
+from ....mmcv.cnn import (ConvModule, DepthwiseSeparableConvModule, constant_init,
                       kaiming_init)
 from torch.nn.modules.batchnorm import _BatchNorm
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.models.decode_heads.psp_head import PPM
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import resize
+from ....mmseg.models.decode_heads.psp_head import PPM
+from ....mmseg.ops import resize
 from ..builder import BACKBONES
 from ..utils.inverted_residual import InvertedResidual
 

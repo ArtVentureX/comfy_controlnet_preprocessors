@@ -4,9 +4,9 @@ from typing import Optional
 import pkg_resources
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.checkpoint import DetectionCheckpointer
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import CfgNode, LazyConfig, get_cfg, instantiate
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling import build_model
+from ..checkpoint import DetectionCheckpointer
+from ..config import CfgNode, LazyConfig, get_cfg, instantiate
+from ..modeling import build_model
 
 
 class _ModelZooUrls(object):
@@ -192,7 +192,7 @@ def get(config_path, trained: bool = False, device: Optional[str] = None):
 
     Example:
     ::
-        from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2 import model_zoo
+        from . import model_zoo
         model = model_zoo.get("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml", trained=True)
     """
     cfg = get_config(config_path, trained)

@@ -9,7 +9,7 @@ import torch
 from einops import rearrange
 from .zoedepth.models.zoedepth.zoedepth_v1 import ZoeDepth
 from .zoedepth.utils.config import get_config
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path, load_file_from_url
+from ...util import annotator_ckpts_path, load_file_from_url
 import comfy.model_management
 
 class ZoeDetector:

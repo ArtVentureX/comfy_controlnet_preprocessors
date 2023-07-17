@@ -3,8 +3,8 @@ import torch
 from torch.nn.parallel.distributed import (DistributedDataParallel,
                                            _find_tensors)
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv import print_log
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import TORCH_VERSION, digit_version
+from ...mmcv import print_log
+from ...mmcv.utils import TORCH_VERSION, digit_version
 from .scatter_gather import scatter_kwargs
 
 

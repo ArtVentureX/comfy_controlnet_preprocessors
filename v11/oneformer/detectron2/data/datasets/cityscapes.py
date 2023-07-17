@@ -6,13 +6,13 @@ import multiprocessing as mp
 import numpy as np
 import os
 from itertools import chain
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ....pycocotools import mask as mask_util
 from PIL import Image
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import BoxMode
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.comm import get_world_size
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import setup_logger
+from ...structures import BoxMode
+from ...utils.comm import get_world_size
+from ...utils.file_io import PathManager
+from ...utils.logger import setup_logger
 
 try:
     import cv2  # noqa
@@ -293,8 +293,8 @@ if __name__ == "__main__":
     parser.add_argument("gt_dir")
     parser.add_argument("--type", choices=["instance", "semantic"], default="instance")
     args = parser.parse_args()
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.catalog import Metadata
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.visualizer import Visualizer
+    from ...data.catalog import Metadata
+    from ...utils.visualizer import Visualizer
     from cityscapesscripts.helpers.labels import labels
 
     logger = setup_logger(name=__name__)

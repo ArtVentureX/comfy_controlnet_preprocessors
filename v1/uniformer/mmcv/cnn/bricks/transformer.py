@@ -5,23 +5,23 @@ import warnings
 import torch
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv import ConfigDict, deprecated_api_warning
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import Linear, build_activation_layer, build_norm_layer
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner.base_module import BaseModule, ModuleList, Sequential
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import build_from_cfg
+from ....mmcv import ConfigDict, deprecated_api_warning
+from ...cnn import Linear, build_activation_layer, build_norm_layer
+from ...runner.base_module import BaseModule, ModuleList, Sequential
+from ...utils import build_from_cfg
 from .drop import build_dropout
 from .registry import (ATTENTION, FEEDFORWARD_NETWORK, POSITIONAL_ENCODING,
                        TRANSFORMER_LAYER, TRANSFORMER_LAYER_SEQUENCE)
 
 # Avoid BC-breaking of importing MultiScaleDeformableAttention from this file
 try:
-    from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.ops.multi_scale_deform_attn import MultiScaleDeformableAttention  # noqa F401
+    from ...ops.multi_scale_deform_attn import MultiScaleDeformableAttention  # noqa F401
     warnings.warn(
         ImportWarning(
             '``MultiScaleDeformableAttention`` has been moved to '
             '``mmcv.ops.multi_scale_deform_attn``, please change original path '  # noqa E501
-            '``from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn.bricks.transformer import MultiScaleDeformableAttention`` '  # noqa E501
-            'to ``from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.ops.multi_scale_deform_attn import MultiScaleDeformableAttention`` '  # noqa E501
+            '``from ...cnn.bricks.transformer import MultiScaleDeformableAttention`` '  # noqa E501
+            'to ``from ...ops.multi_scale_deform_attn import MultiScaleDeformableAttention`` '  # noqa E501
         ))
 
 except ImportError:

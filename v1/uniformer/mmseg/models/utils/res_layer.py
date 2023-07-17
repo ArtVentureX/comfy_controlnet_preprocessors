@@ -1,4 +1,4 @@
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import build_conv_layer, build_norm_layer
+from ....mmcv.cnn import build_conv_layer, build_norm_layer
 from torch import nn as nn
 
 

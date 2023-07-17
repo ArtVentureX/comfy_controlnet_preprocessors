@@ -5,7 +5,7 @@ import types
 from collections import UserDict
 from typing import List
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import log_first_n
+from ..utils.logger import log_first_n
 
 __all__ = ["DatasetCatalog", "MetadataCatalog", "Metadata"]
 

@@ -1,11 +1,11 @@
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import (build_conv_layer, build_norm_layer, constant_init,
+from ....mmcv.cnn import (build_conv_layer, build_norm_layer, constant_init,
                       kaiming_init)
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import load_checkpoint
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils.parrots_wrapper import _BatchNorm
+from ....mmcv.runner import load_checkpoint
+from ....mmcv.utils.parrots_wrapper import _BatchNorm
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import Upsample, resize
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.utils import get_root_logger
+from ....mmseg.ops import Upsample, resize
+from ....mmseg.utils import get_root_logger
 from ..builder import BACKBONES
 from .resnet import BasicBlock, Bottleneck
 
@@ -229,7 +229,7 @@ class HRNet(nn.Module):
             in resblocks to let them behave as identity.
 
     Example:
-        >>> from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.models import HRNet
+        >>> from ....mmseg.models import HRNet
         >>> import torch
         >>> extra = dict(
         >>>     stage1=dict(

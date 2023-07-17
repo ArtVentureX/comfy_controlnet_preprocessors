@@ -6,8 +6,8 @@
 import json
 import os
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import DatasetCatalog, MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ....detectron2.data import DatasetCatalog, MetadataCatalog
+from ....detectron2.utils.file_io import PathManager
 
 ADE20K_150_CATEGORIES = [
     {"color": [120, 120, 120], "id": 0, "isthing": 0, "name": "wall"},

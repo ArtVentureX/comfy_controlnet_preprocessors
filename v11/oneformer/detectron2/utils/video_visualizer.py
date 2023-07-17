@@ -1,10 +1,10 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import numpy as np
 from typing import List
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ...pycocotools import mask as mask_util
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Instances
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.visualizer import (
+from ..structures import Instances
+from ..utils.visualizer import (
     ColorMode,
     Visualizer,
     _create_text_labels,

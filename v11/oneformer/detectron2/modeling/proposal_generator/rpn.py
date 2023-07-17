@@ -4,12 +4,12 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import Conv2d, ShapeSpec, cat
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, ImageList, Instances, pairwise_iou
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import get_event_storage
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.memory import retry_if_cuda_oom
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.registry import Registry
+from ...config import configurable
+from ...layers import Conv2d, ShapeSpec, cat
+from ...structures import Boxes, ImageList, Instances, pairwise_iou
+from ...utils.events import get_event_storage
+from ...utils.memory import retry_if_cuda_oom
+from ...utils.registry import Registry
 
 from ..anchor_generator import build_anchor_generator
 from ..box_regression import Box2BoxTransform, _dense_box_regression_loss

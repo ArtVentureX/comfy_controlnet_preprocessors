@@ -6,16 +6,16 @@
 import json
 import os
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import DatasetCatalog, MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets import load_sem_seg
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets.builtin_meta import COCO_CATEGORIES
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ....detectron2.data import DatasetCatalog, MetadataCatalog
+from ....detectron2.data.datasets import load_sem_seg
+from ....detectron2.data.datasets.builtin_meta import COCO_CATEGORIES
+from ....detectron2.utils.file_io import PathManager
 import contextlib
 import logging
 import io
 from fvcore.common.timer import Timer
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import BoxMode
+from ....pycocotools import mask as mask_util
+from ....detectron2.structures import BoxMode
 
 
 logger = logging.getLogger(__name__)
@@ -41,7 +41,7 @@ _PREDEFINED_SPLITS_COCO_PANOPTIC = {
 }
 
 def load_coco_instance_json(json_file, image_root, dataset_name=None):
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.coco import COCO
+    from ....pycocotools.coco import COCO
 
     timer = Timer()
     json_file = PathManager.get_local_path(json_file)

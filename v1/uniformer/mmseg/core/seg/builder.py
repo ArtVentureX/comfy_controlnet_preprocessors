@@ -1,4 +1,4 @@
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import Registry, build_from_cfg
+from ....mmcv.utils import Registry, build_from_cfg
 
 PIXEL_SAMPLERS = Registry('pixel sampler')
 

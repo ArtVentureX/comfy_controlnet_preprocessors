@@ -4,10 +4,10 @@ import logging
 from typing import Dict, List
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, batched_nms_rotated, cat
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Instances, RotatedBoxes, pairwise_iou_rotated
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.memory import retry_if_cuda_oom
+from ...config import configurable
+from ...layers import ShapeSpec, batched_nms_rotated, cat
+from ...structures import Instances, RotatedBoxes, pairwise_iou_rotated
+from ...utils.memory import retry_if_cuda_oom
 
 from ..box_regression import Box2BoxTransformRotated
 from .build import PROPOSAL_GENERATOR_REGISTRY

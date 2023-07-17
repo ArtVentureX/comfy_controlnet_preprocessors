@@ -1,7 +1,7 @@
 import os.path as osp
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import DistEvalHook as _DistEvalHook
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import EvalHook as _EvalHook
+from ....mmcv.runner import DistEvalHook as _DistEvalHook
+from ....mmcv.runner import EvalHook as _EvalHook
 
 
 class EvalHook(_EvalHook):
@@ -30,7 +30,7 @@ class EvalHook(_EvalHook):
         """
         if self.by_epoch or not self.every_n_iters(runner, self.interval):
             return
-        from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.apis import single_gpu_test
+        from ....mmseg.apis import single_gpu_test
         runner.log_buffer.clear()
         results = single_gpu_test(
             runner.model,
@@ -46,7 +46,7 @@ class EvalHook(_EvalHook):
         """
         if not self.by_epoch or not self.every_n_epochs(runner, self.interval):
             return
-        from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.apis import single_gpu_test
+        from ....mmseg.apis import single_gpu_test
         runner.log_buffer.clear()
         results = single_gpu_test(runner.model, self.dataloader, show=False)
         self.evaluate(runner, results)
@@ -78,7 +78,7 @@ class DistEvalHook(_DistEvalHook):
         """
         if self.by_epoch or not self.every_n_iters(runner, self.interval):
             return
-        from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.apis import multi_gpu_test
+        from ....mmseg.apis import multi_gpu_test
         runner.log_buffer.clear()
         results = multi_gpu_test(
             runner.model,
@@ -97,7 +97,7 @@ class DistEvalHook(_DistEvalHook):
         """
         if not self.by_epoch or not self.every_n_epochs(runner, self.interval):
             return
-        from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.apis import multi_gpu_test
+        from ....mmseg.apis import multi_gpu_test
         runner.log_buffer.clear()
         results = multi_gpu_test(
             runner.model,

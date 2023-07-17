@@ -15,8 +15,8 @@ from typing import List, Tuple, Union
 import yaml
 from omegaconf import DictConfig, ListConfig, OmegaConf, SCMode
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.registry import _convert_target_to_string
+from ..utils.file_io import PathManager
+from ..utils.registry import _convert_target_to_string
 
 __all__ = ["LazyCall", "LazyConfig"]
 

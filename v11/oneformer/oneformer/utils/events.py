@@ -1,7 +1,7 @@
 import os
 import wandb
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils import comm
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import EventWriter, get_event_storage
+from ....oneformer.detectron2.utils import comm
+from ....oneformer.detectron2.utils.events import EventWriter, get_event_storage
 
 
 def setup_wandb(cfg, args):

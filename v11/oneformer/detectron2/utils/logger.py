@@ -10,7 +10,7 @@ import torch
 from tabulate import tabulate
 from termcolor import colored
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ..utils.file_io import PathManager
 
 __all__ = ["setup_logger", "log_first_n", "log_every_n", "log_every_n_seconds"]
 

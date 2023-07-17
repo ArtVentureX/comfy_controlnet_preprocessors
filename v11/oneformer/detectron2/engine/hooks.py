@@ -18,12 +18,12 @@ from fvcore.common.param_scheduler import ParamScheduler
 from fvcore.common.timer import Timer
 from fvcore.nn.precise_bn import get_bn_modules, update_bn_stats
 
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.comm as comm
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.evaluation.testing import flatten_results_dict
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.solver import LRMultiplier
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.solver import LRScheduler as _LRScheduler
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import EventStorage, EventWriter
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ..utils import comm
+from ..evaluation.testing import flatten_results_dict
+from ..solver import LRMultiplier
+from ..solver import LRScheduler as _LRScheduler
+from ..utils.events import EventStorage, EventWriter
+from ..utils.file_io import PathManager
 
 from .train_loop import HookBase
 

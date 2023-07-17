@@ -8,9 +8,9 @@ from collections import OrderedDict
 import torch
 from PIL import Image
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils import comm
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ..data import MetadataCatalog
+from ..utils import comm
+from ..utils.file_io import PathManager
 
 from .evaluator import DatasetEvaluator
 

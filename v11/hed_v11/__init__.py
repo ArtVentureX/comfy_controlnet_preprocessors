@@ -11,7 +11,7 @@ import torch
 import numpy as np
 
 from einops import rearrange
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path, safe_step
+from ...util import annotator_ckpts_path, safe_step
 import comfy.model_management as model_management
 
 
@@ -59,7 +59,7 @@ class HEDdetector:
         remote_model_path = "https://huggingface.co/lllyasviel/Annotators/resolve/main/ControlNetHED.pth"
         modelpath = os.path.join(annotator_ckpts_path, "ControlNetHED.pth")
         if not os.path.exists(modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
         self.netNetwork = ControlNetHED_Apache2().float().to(model_management.get_torch_device()).eval()
         self.netNetwork.load_state_dict(torch.load(modelpath, map_location=model_management.get_torch_device()))

@@ -7,8 +7,8 @@ from logging import FileHandler
 
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner.dist_utils import master_only
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils.logging import get_logger, logger_initialized, print_log
+from ...mmcv.runner.dist_utils import master_only
+from ...mmcv.utils.logging import get_logger, logger_initialized, print_log
 
 
 class BaseModule(nn.Module, metaclass=ABCMeta):

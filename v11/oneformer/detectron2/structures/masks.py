@@ -3,12 +3,12 @@ import copy
 import itertools
 import numpy as np
 from typing import Any, Iterator, List, Union
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ...pycocotools import mask as mask_util
 import torch
 from torch import device
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers.roi_align import ROIAlign
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.memory import retry_if_cuda_oom
+from ..layers.roi_align import ROIAlign
+from ..utils.memory import retry_if_cuda_oom
 
 from .boxes import Boxes
 
@@ -521,7 +521,7 @@ class ROIMasks:
         """
         Args: see documentation of :func:`paste_masks_in_image`.
         """
-        from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers.mask_ops import paste_masks_in_image, _paste_masks_tensor_shape
+        from ..layers.mask_ops import paste_masks_in_image, _paste_masks_tensor_shape
 
         if torch.jit.is_tracing():
             if isinstance(height, torch.Tensor):

@@ -2,11 +2,11 @@ from abc import ABCMeta, abstractmethod
 
 import torch
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import normal_init
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import auto_fp16, force_fp32
+from ....mmcv.cnn import normal_init
+from ....mmcv.runner import auto_fp16, force_fp32
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.core import build_pixel_sampler
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import resize
+from ....mmseg.core import build_pixel_sampler
+from ....mmseg.ops import resize
 from ..builder import build_loss
 from ..losses import accuracy
 

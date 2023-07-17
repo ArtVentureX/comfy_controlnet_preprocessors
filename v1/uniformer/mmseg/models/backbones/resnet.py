@@ -1,11 +1,11 @@
 import torch.nn as nn
 import torch.utils.checkpoint as cp
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import (build_conv_layer, build_norm_layer, build_plugin_layer,
+from ....mmcv.cnn import (build_conv_layer, build_norm_layer, build_plugin_layer,
                       constant_init, kaiming_init)
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import load_checkpoint
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils.parrots_wrapper import _BatchNorm
+from ....mmcv.runner import load_checkpoint
+from ....mmcv.utils.parrots_wrapper import _BatchNorm
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.utils import get_root_logger
+from ....mmseg.utils import get_root_logger
 from ..builder import BACKBONES
 from ..utils import ResLayer
 
@@ -348,7 +348,7 @@ class ResNet(nn.Module):
             in resblocks to let them behave as identity.
 
     Example:
-        >>> from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.models import ResNet
+        >>> from ....mmseg.models import ResNet
         >>> import torch
         >>> self = ResNet(depth=18)
         >>> self.eval()

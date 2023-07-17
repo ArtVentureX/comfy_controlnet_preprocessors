@@ -8,7 +8,7 @@ from abc import ABCMeta, abstractmethod
 import torch
 from torch.optim import Optimizer
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from ....uniformer import mmcv as mmcv
 from ..parallel import is_module_wrapper
 from .checkpoint import load_checkpoint
 from .dist_utils import get_dist_info

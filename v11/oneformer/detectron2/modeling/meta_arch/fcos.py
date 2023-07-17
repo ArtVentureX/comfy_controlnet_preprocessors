@@ -7,9 +7,9 @@ from fvcore.nn import sigmoid_focal_loss_jit
 from torch import nn
 from torch.nn import functional as F
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, batched_nms
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, ImageList, Instances, pairwise_point_box_distance
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import get_event_storage
+from ...layers import ShapeSpec, batched_nms
+from ...structures import Boxes, ImageList, Instances, pairwise_point_box_distance
+from ...utils.events import get_event_storage
 
 from ..anchor_generator import DefaultAnchorGenerator
 from ..backbone import Backbone

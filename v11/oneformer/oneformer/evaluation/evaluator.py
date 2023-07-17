@@ -12,8 +12,8 @@ from typing import List, Union
 import torch
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.comm import get_world_size, is_main_process
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import log_every_n_seconds
+from ...detectron2.utils.comm import get_world_size, is_main_process
+from ...detectron2.utils.logger import log_every_n_seconds
 
 
 class DatasetEvaluator:

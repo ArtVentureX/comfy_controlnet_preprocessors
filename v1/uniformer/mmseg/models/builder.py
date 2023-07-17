@@ -1,7 +1,7 @@
 import warnings
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import MODELS as MMCV_MODELS
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import Registry
+from ....mmcv.cnn import MODELS as MMCV_MODELS
+from ....mmcv.utils import Registry
 
 MODELS = Registry('models', parent=MMCV_MODELS)
 

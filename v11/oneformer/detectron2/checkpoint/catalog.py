@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 import logging
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathHandler, PathManager
+from ..utils.file_io import PathHandler, PathManager
 
 
 class ModelCatalog(object):

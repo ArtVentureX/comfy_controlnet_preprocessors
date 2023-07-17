@@ -3,7 +3,7 @@
 import os
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ..utils.file_io import PathManager
 
 from .torchscript_patch import freeze_training_mode, patch_instances
 

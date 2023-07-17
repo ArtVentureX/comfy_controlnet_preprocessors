@@ -3,7 +3,7 @@ from typing import List
 import torch
 from torch import nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.runner import force_fp32
+from ...mmcv.runner import force_fp32
 from .furthest_point_sample import (furthest_point_sample,
                                     furthest_point_sample_with_dist)
 

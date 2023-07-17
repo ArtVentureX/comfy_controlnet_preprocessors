@@ -5,12 +5,12 @@ from typing import Dict
 import torch
 import torch.nn.functional as F
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, cat
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers.roi_align_rotated import ROIAlignRotated
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling import poolers
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling.proposal_generator import rpn
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.modeling.roi_heads.mask_head import mask_rcnn_inference
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, ImageList, Instances, Keypoints, RotatedBoxes
+from ..layers import ShapeSpec, cat
+from ..layers.roi_align_rotated import ROIAlignRotated
+from ..modeling import poolers
+from ..modeling.proposal_generator import rpn
+from ..modeling.roi_heads.mask_head import mask_rcnn_inference
+from ..structures import Boxes, ImageList, Instances, Keypoints, RotatedBoxes
 
 from .shared import alias, to_device
 

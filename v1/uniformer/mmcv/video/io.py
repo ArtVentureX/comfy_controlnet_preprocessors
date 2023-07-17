@@ -7,7 +7,7 @@ from cv2 import (CAP_PROP_FOURCC, CAP_PROP_FPS, CAP_PROP_FRAME_COUNT,
                  CAP_PROP_FRAME_HEIGHT, CAP_PROP_FRAME_WIDTH,
                  CAP_PROP_POS_FRAMES, VideoWriter_fourcc)
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import (check_file_exist, mkdir_or_exist, scandir,
+from ..utils import (check_file_exist, mkdir_or_exist, scandir,
                         track_progress)
 
 
@@ -52,7 +52,7 @@ class VideoReader:
 
     :Example:
 
-    >>> import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+    >>> import . as mmcv
     >>> v = mmcv.VideoReader('sample.mp4')
     >>> len(v)  # get the total frame number with `len()`
     120

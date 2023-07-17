@@ -7,7 +7,7 @@ import numpy as np
 import comfy.model_management
 from einops import rearrange
 from .model import pidinet
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path, safe_step, load_file_from_url
+from ...util import annotator_ckpts_path, safe_step, load_file_from_url
 
 class PidiNetDetector:
     def __init__(self):

@@ -20,8 +20,8 @@ To add new dataset, refer to the tutorial "docs/DATASETS.md".
 """
 
 import os
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets.builtin_meta import  _get_builtin_metadata
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets.coco import register_coco_instances
+from ....detectron2.data.datasets.builtin_meta import  _get_builtin_metadata
+from ....detectron2.data.datasets.coco import register_coco_instances
 
 
 _PREDEFINED_SPLITS_COCO = {

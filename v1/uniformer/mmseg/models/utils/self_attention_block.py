@@ -1,5 +1,5 @@
 import torch
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import ConvModule, constant_init
+from ....mmcv.cnn import ConvModule, constant_init
 from torch import nn as nn
 from torch.nn import functional as F
 

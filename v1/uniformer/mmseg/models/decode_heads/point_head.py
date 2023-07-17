@@ -2,11 +2,11 @@
 
 import torch
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import ConvModule, normal_init
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.ops import point_sample
+from ....mmcv.cnn import ConvModule, normal_init
+from ....mmcv.ops import point_sample
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.models.builder import HEADS
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmseg.ops import resize
+from ....mmseg.models.builder import HEADS
+from ....mmseg.ops import resize
 from ..losses import accuracy
 from .cascade_decode_head import BaseCascadeDecodeHead
 

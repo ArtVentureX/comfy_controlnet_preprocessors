@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.cnn import ConvModule, build_upsample_layer
+from ....mmcv.cnn import ConvModule, build_upsample_layer
 
 
 class UpConvBlock(nn.Module):

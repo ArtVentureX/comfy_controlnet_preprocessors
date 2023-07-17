@@ -3,7 +3,7 @@ import cv2
 import os
 import torch
 from einops import rearrange
-from custom_nodes.comfy_controlnet_preprocessors.util import annotator_ckpts_path
+from ...util import annotator_ckpts_path
 import comfy.model_management as model_management
 
 
@@ -99,7 +99,7 @@ class HEDdetector:
         remote_model_path = "https://huggingface.co/lllyasviel/ControlNet/resolve/main/annotator/ckpts/network-bsds500.pth"
         modelpath = os.path.join(annotator_ckpts_path, "network-bsds500.pth")
         if not os.path.exists(modelpath):
-            from custom_nodes.comfy_controlnet_preprocessors.util import load_file_from_url
+            from ...util import load_file_from_url
             load_file_from_url(remote_model_path, model_dir=annotator_ckpts_path)
         self.netNetwork = Network(modelpath).to(model_management.get_torch_device()).eval()
 

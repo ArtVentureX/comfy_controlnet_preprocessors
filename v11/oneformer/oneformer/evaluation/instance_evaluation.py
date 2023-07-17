@@ -12,21 +12,21 @@ import numpy as np
 import os
 import pickle
 from collections import OrderedDict
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ...pycocotools import mask as mask_util
 import torch
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.coco import COCO
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.cocoeval import COCOeval
+from ...pycocotools.coco import COCO
+from ...pycocotools.cocoeval import COCOeval
 from tabulate import tabulate
 
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.comm as comm
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import CfgNode
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets.coco import convert_to_coco_json
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.evaluation.coco_evaluation import COCOEvaluator, _evaluate_predictions_on_coco
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.evaluation.fast_eval_api import COCOeval_opt
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, BoxMode, pairwise_iou
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import create_small_table
+from ...detectron2.utils import comm as comm
+from ...detectron2.config import CfgNode
+from ...detectron2.data import MetadataCatalog
+from ...detectron2.data.datasets.coco import convert_to_coco_json
+from ...detectron2.evaluation.coco_evaluation import COCOEvaluator, _evaluate_predictions_on_coco
+from ...detectron2.evaluation.fast_eval_api import COCOeval_opt
+from ...detectron2.structures import Boxes, BoxMode, pairwise_iou
+from ...detectron2.utils.file_io import PathManager
+from ...detectron2.utils.logger import create_small_table
 
 
 # modified from COCOEvaluator for instance segmetnat

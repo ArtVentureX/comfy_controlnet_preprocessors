@@ -3,10 +3,10 @@ import logging
 import numpy as np
 import torch
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import ShapeSpec, batched_nms_rotated
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Instances, RotatedBoxes, pairwise_iou_rotated
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.events import get_event_storage
+from ...config import configurable
+from ...layers import ShapeSpec, batched_nms_rotated
+from ...structures import Instances, RotatedBoxes, pairwise_iou_rotated
+from ...utils.events import get_event_storage
 
 from ..box_regression import Box2BoxTransformRotated
 from ..poolers import ROIPooler

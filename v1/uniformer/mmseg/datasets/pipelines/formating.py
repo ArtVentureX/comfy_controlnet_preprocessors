@@ -1,9 +1,9 @@
 from collections.abc import Sequence
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from .....uniformer import mmcv as mmcv
 import numpy as np
 import torch
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.parallel import DataContainer as DC
+from ....mmcv.parallel import DataContainer as DC
 
 from ..builder import PIPELINES
 

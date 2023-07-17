@@ -10,7 +10,7 @@ model loading.
 import numpy as np
 from torch import nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.layers import CNNBlockBase, ShapeSpec, get_norm
+from ...layers import CNNBlockBase, ShapeSpec, get_norm
 
 from .backbone import Backbone
 

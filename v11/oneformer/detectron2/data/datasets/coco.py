@@ -7,13 +7,13 @@ import logging
 import numpy as np
 import os
 import shutil
-import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.mask as mask_util
+from ....pycocotools import mask as mask_util
 from fvcore.common.timer import Timer
 from iopath.common.file_io import file_lock
 from PIL import Image
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import Boxes, BoxMode, PolygonMasks, RotatedBoxes
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ...structures import Boxes, BoxMode, PolygonMasks, RotatedBoxes
+from ...utils.file_io import PathManager
 
 from .. import DatasetCatalog, MetadataCatalog
 
@@ -61,7 +61,7 @@ def load_coco_json(json_file, image_root, dataset_name=None, extra_annotation_ke
         1. This function does not read the image files.
            The results do not have the "image" field.
     """
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.pycocotools.coco import COCO
+    from ....pycocotools.coco import COCO
 
     timer = Timer()
     json_file = PathManager.get_local_path(json_file)
@@ -517,9 +517,9 @@ if __name__ == "__main__":
         "dataset_name" can be "coco_2014_minival_100", or other
         pre-registered ones
     """
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import setup_logger
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.visualizer import Visualizer
-    import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets  # noqa # add pre-defined metadata
+    from ...utils.logger import setup_logger
+    from ...utils.visualizer import Visualizer
+    from ...data import datasets  # noqa # add pre-defined metadata
     import sys
 
     logger = setup_logger(name=__name__)

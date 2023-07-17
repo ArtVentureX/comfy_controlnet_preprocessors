@@ -3,9 +3,9 @@ import logging
 import os
 from fvcore.common.timer import Timer
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import DatasetCatalog, MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import BoxMode
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.file_io import PathManager
+from ...data import DatasetCatalog, MetadataCatalog
+from ...structures import BoxMode
+from ...utils.file_io import PathManager
 
 from .builtin_meta import _get_coco_instances_meta
 from .lvis_v0_5_categories import LVIS_CATEGORIES as LVIS_V0_5_CATEGORIES
@@ -220,10 +220,10 @@ if __name__ == "__main__":
     """
     import sys
     import numpy as np
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.logger import setup_logger
+    from ...utils.logger import setup_logger
     from PIL import Image
-    import custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data.datasets  # noqa # add pre-defined metadata
-    from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.utils.visualizer import Visualizer
+    from ...data import datasets  # noqa # add pre-defined metadata
+    from ...utils.visualizer import Visualizer
 
     logger = setup_logger(name=__name__)
     meta = MetadataCatalog.get(sys.argv[3])

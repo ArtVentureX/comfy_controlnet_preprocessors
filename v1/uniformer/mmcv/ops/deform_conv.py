@@ -9,7 +9,7 @@ from torch.autograd import Function
 from torch.autograd.function import once_differentiable
 from torch.nn.modules.utils import _pair, _single
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import deprecated_api_warning
+from ...mmcv.utils import deprecated_api_warning
 from ..cnn import CONV_LAYERS
 from ..utils import ext_loader, print_log
 

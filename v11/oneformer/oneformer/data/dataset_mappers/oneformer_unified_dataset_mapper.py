@@ -11,14 +11,14 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.config import configurable
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import detection_utils as utils
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import transforms as T
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.structures import BitMasks, Instances
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.data import MetadataCatalog
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.detectron2.projects.point_rend import ColorAugSSDTransform
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.oneformer.utils.box_ops import masks_to_boxes
-from custom_nodes.comfy_controlnet_preprocessors.v11.oneformer.oneformer.data.tokenizer import SimpleTokenizer, Tokenize
+from ....detectron2.config import configurable
+from ....detectron2.data import detection_utils as utils
+from ....detectron2.data import transforms as T
+from ....detectron2.structures import BitMasks, Instances
+from ....detectron2.data import MetadataCatalog
+from ....detectron2.projects.point_rend import ColorAugSSDTransform
+from ...utils.box_ops import masks_to_boxes
+from ..tokenizer import SimpleTokenizer, Tokenize
 
 __all__ = ["OneFormerUnifiedDatasetMapper"]
 

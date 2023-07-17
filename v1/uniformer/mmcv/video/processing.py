@@ -4,7 +4,7 @@ import os.path as osp
 import subprocess
 import tempfile
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import requires_executable
+from ..utils import requires_executable
 
 
 @requires_executable('ffmpeg')

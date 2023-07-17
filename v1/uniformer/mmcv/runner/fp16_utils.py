@@ -8,7 +8,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import TORCH_VERSION, digit_version
+from ...mmcv.utils import TORCH_VERSION, digit_version
 from .dist_utils import allreduce_grads as _allreduce_grads
 
 try:

@@ -1,9 +1,9 @@
 import os.path as osp
 import tempfile
 
-import custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv as mmcv
+from ....uniformer import mmcv as mmcv
 import numpy as np
-from custom_nodes.comfy_controlnet_preprocessors.v1.uniformer.mmcv.utils import print_log
+from ...mmcv.utils import print_log
 from PIL import Image
 
 from .builder import DATASETS
